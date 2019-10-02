@@ -19,7 +19,7 @@ after="$after 00:00"
 before=`date -v-$number_days_back "+%F"`
 before="$before 23:59"
 
-logs=`git --no-pager log --before="$before" --after="$after" --author="Doug Woodrow" --format=%B` 
+logs=`git --no-pager log --all --before="$before" --after="$after" --author="Doug Woodrow" --format=%B` 
 echo "$logs" > logs.tmp
 
 log_statement=""
